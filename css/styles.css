@@ -1,0 +1,283 @@
+body{
+	background-color: #008080;
+	color: white;
+}
+
+.hidden{
+    display:none!important;
+}
+.shutdown-msg{
+	text-align:center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	color:#C03904;
+	
+}
+.topbar{
+	font-family: 'Arial',sans-serif;
+	background: #044999; /* Old browsers */
+    background: -moz-linear-gradient(left, #044999 0%, #7db9e8 98%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #044999 0%,#7db9e8 98%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #044999 0%,#7db9e8 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#044999', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+	color: white;
+	border-top: solid 0.2em #c0c0c0;
+	border-left: solid 0.2em #c0c0c0;
+	overflow: hidden;
+	width: 99.4%;
+	height: 2em;
+	font-size: 18px;
+	float: top;
+	display: inline-block;
+	text-align: center;
+}
+.bottom-bar{
+    font-family: 'Arial',sans-serif;
+    background: #c0c0c0;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2.5em;
+    font-size: 18px;
+    float: bottom;
+    position: fixed;
+    border-top: solid 0.1em #e3e3e3;
+}
+.clock{
+    float: right;
+    position: fixed;
+    color: black;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+    border-top: solid 0.1em #514F4F;
+    border-left: solid 0.1em #514F4F;
+    padding-top: 0.5em;
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    padding-bottom: 0.5em;
+    display: inline;
+    right: 0.5%;
+    bottom: 0.5%;
+}
+.start-menu {
+    float:left;
+    border-bottom: solid 0.5em #514F4F;
+    border-right: solid 0.2em #514F4F;
+    left: 0;
+    position: fixed;
+    display: flex;
+    background: #c0c0c0;
+    bottom: 2.5em;
+    width: 20em;
+    height: 30em;
+}
+.start-button{
+    font-family: 'Arial',sans-serif;
+    background: #c0c0c0;
+    color: black;
+    width: 7em;
+    height: 80%;
+    left: 1%;
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    float: left;
+}
+.start-button img {
+    display: inline-block;
+    vertical-align: middle;
+	float: left;
+}
+.start-navbar{
+	width: 100%;
+	color: black;
+	top: 4em;
+	font-family: 'Arial',sans-serif;
+	border: none;
+	float: bottom;
+
+}
+.start-td{
+    height: 5.3em;
+    background-color: #c0c0c0;
+    width: 80%;
+    float: left;
+	border: none;
+	bottom: 0;
+}
+.start-td:hover{
+    background-color: #052689;
+	color: white;
+	cursor: pointer;
+}
+.start-side{
+    float: left;
+    width: 20%;
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top, #1e5799 0%, #052689 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1e5799 0%,#052689 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1e5799 0%,#052689 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#052689',GradientType=0 ); /* IE6-9 */
+}
+.sideways{
+	-webkit-transform:rotate(270deg);
+    -moz-transform:rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform:rotate(270deg);
+    transform: rotate(270deg);
+    white-space:nowrap;
+    display:block;
+	position: absolute;
+	bottom: 2em;
+	right: 7em;
+	font-size: 30px;
+	padding: 0;
+	margin: 0;
+}
+.windows-button{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: right;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-top: 3px solid #018dc4;
+  border-right: 0 double #018dc4;
+  border-bottom: 0 double #018dc4;
+  border-left: 3px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal normal bold 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #c0c0c0;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+	
+}
+.window{
+	background-color: #c0c0c0;
+	padding: 0;
+	height: 40%;
+	width: 50%;
+	margin-top: 3%;
+	margin-left: 25%;
+    margin-bottom: 6%;
+	color: black;
+}
+.window-text{
+	width: 50%;
+	float: left;
+	text-align: left;
+	position: relative;
+	bottom: 0.5em;
+}
+.window-buttons{
+	width: 20%;
+	float: right;
+	display: inline;
+	padding-right: 0.1em;
+	padding-top: 0.1em;
+}
+.window-button{
+	height: 100%;
+	float: right;
+	font-size: 1em;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+
+.navbar{
+	width: 100%;
+	color: black;
+	top: 4em;
+	font-family: 'Arial',sans-serif;
+	border: none;
+
+}
+.navbar-td{
+	height: 6em;
+    border-top: solid 2px #d8d8d8;
+    border-left: solid 2px #d8d8d8;
+    border-bottom: solid 2px #a7a7a7;
+    border-right: solid 2px #a7a7a7;
+	background-color: #c0c0c0;
+    width: 32%;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-align: center;
+}
+.navbar-td:hover{
+    background-color: #052689;
+    cursor: pointer;
+	color: white;
+}
+.navbar-ul {
+	background-color: #c0c0c0;
+	color: black;
+    list-style-type: none;
+    margin: 0;
+	font-family: 'Arial',sans-serif;
+    position: fixed;
+    top: 4em;
+    width:95%;
+	border-bottom: solid 2px #454545;
+	border-right: solid 2px #454545;
+	border-left: solid 2px #454545;
+	
+}
+
+.navbar-li {
+    float: left;
+	margin: 1em;
+	background-color: #c0c0c0;
+	border-bottom: solid 4px #454545;
+	border-right: solid 4px #454545;
+	border-top: solid 2px #454545;
+	border-left: solid 2px #454545;
+	width: 12em;
+}
+
+.navbar-li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1em 4em;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar-li a:active {
+    background-color: #7E7E7E;
+}
+
+.image-header {
+	background-color: #514F4F;
+	height: 30em;
+	width: 100%;
+}
+
+.image-header.image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+.header-text {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	text-align: center;
+	font-size: 4em;
+	width: 50%;	
+}

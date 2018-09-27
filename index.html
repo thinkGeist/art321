@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nathan Geist - Home</title>
+
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body id="page" onload="setClock()">
+
+<div class="shutdown-msg" id="shutdown-msg" style="display:none;">
+	<h1>It's now safe to turn off your computer</h1>
+    <p style="top:80%; color: white;">Don't do it, just refresh the page...</p>
+</div>
+
+
+<div class="window" id="window" style="display:none;">
+    <div class ="topbar">
+    
+    	<div class="window-text">
+    	  <p style="padding-left: 1em; position: absolute;"><strong>ART 321 Week Navigator 1.0</strong></p>
+    	</div>
+        <div class="window-buttons">
+        	<button class="window-button" onclick="HideArt()">X</button>
+        </div>
+        
+        
+    </div>
+	<h1 style="text-align: center; color: white;">ART 321 Week Navigation System</h1>
+    <h2 style="text-align: center;">Navigate to the week of your choosing by clicking the corresponding week below.</h2>
+    <h4 style="text-align: center; color: #7E7E7E;">Note: This is part of <b>Week 2</b></h4>
+    <table class="navbar" border="7">
+    <tbody>
+        <tr>
+            <td class="navbar-td" onClick="WeekTwo()">Week 2</td>
+            <td class="navbar-td">Week 3</td>
+            <td class="navbar-td">Week 4</td>
+        </tr>
+        <tr>
+            <td class="navbar-td">Week 5</td>
+            <td class="navbar-td">Week 6</td>
+            <td class="navbar-td">Week 7</td>
+        </tr>
+        <tr>
+            <td class="navbar-td">Week 8</td>
+            <td class="navbar-td">Week 9</td>
+            <td class="navbar-td">Week 10</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="window" id="week2-window" style="display:none;">
+    <div class ="topbar">
+    
+    	<div class="window-text">
+    	  <p style="padding-left: 1em; position: absolute;"><strong>Week 2</strong></p>
+    	</div>
+        <div class="window-buttons">
+        	<button class="window-button" onclick="CloseWeekTwo()">X</button>
+        </div>
+        
+        
+    </div>
+	<h1 style="text-align: center; color: white;">Week 2 Project</h1>
+    <h2 style="text-align: center;">I opted for a more interactive take on the web design portion by extending my base page to act like a Windows 98 environment.</h2>
+    <a href="https://en.wikipedia.org/wiki/Windows_98">
+        <img src="img/win98.png" width="346" height="275" style="margin-left:auto; margin-right:auto; display: block;"/>
+    </a>
+    <p>Since my interests lie with various aspects of computers, I figured it would be a neat challenge to try and create a web presence that mimics that of a more classical windows environment. 
+    This is half because I was having troubles thinking of another topic to build a site on, and half because I really wanted to see the 
+    reactions of those who once had to deal with such a fine operating system.</p>
+    <p>Before you ask why, I would counter with why not? Who doesn't want a taste of the nostalgic horror that is the default teal background, and off white windows. Bringing back that feeling of 
+    having to be told when it is safe to shut down <i>(Go ahead try it)</i> your computer was the goal of this project</p>
+    <h3 style="text-align:center;">I hope you enjoy this little blast from the past, who knows maybe I'll extend it more in the future!</h3>
+    <p style="color:grey; text-align:center;">All code was custom written for this project and through thorough study of the Windows 98 interface.
+    All images are owned by the respective trademarks.</p>
+</div>
+
+<div class="start-menu" id="start-menu" style="display:none;">
+    <div class="start-side"><div class="sideways"><p><b>Windows</b> 98</p></div></div>
+    <table class="start-navbar" border="7">
+        <tbody>
+        <tr>
+            <td class="start-td" onclick="ShowArt()"><img src="img/app.png" width="60" height="60" style="padding-top: 1em;">Art 321 Week Navigator</td>
+        </tr>
+        <tr>
+            <td class="start-td" onclick="WeekTwo()"><img src="img/app.png" width="60" height="60" style="padding-top: 1em;">Week 2</td>
+        </tr>
+        <tr>
+            <td class="start-td" onclick="window.location.href='https://thinkgeist.com'"><img src="img/profile.png" width="60" height="60" style="padding-top: 1em;">Personal Webspace</td>
+        </tr>
+        <tr>
+            <td class="start-td" onclick="window.location.href='https://en.wikipedia.org/wiki/Windows_98'"><img src="img/ie.png" width="60" height="60" style="padding-top: 1em;">Inspired by Windows 98</td>
+        </tr>
+        <tr>
+            <td class="start-td" onclick="HideBody()"><img src="img/shutdown.png" width="60" height="60" style="padding-top: 1em;">Shut Down...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="bottom-bar" id="taskbar">
+    <button class="start-button" onclick="ShowStartMenu()">
+        <img src="img/logo.png" width="20" height="20">
+        <strong>Start</strong>
+    </button>
+    <div class="clock">
+        <span id="clock-num"></span>
+    </div>
+</div>
+<audio id="shutdownSound">
+  <source src="audio/shutdown.mp3" type="audio/mpeg"/>
+  Your browser does not support the audio element.
+</audio>
+
+</body>
+
+</html>
+
+<script>
+function ShowStartMenu() {
+    if (document.getElementById("start-menu").style.display === "none"){
+        document.getElementById("start-menu").style.display = "";
+    }
+    else{
+        document.getElementById("start-menu").style.display = "none";
+    }
+}
+
+function HideBody() {
+	document.getElementById("shutdownSound").play();
+	setTimeout(Shutdown,3000);
+}
+function Shutdown(){
+	HideArt();
+	CloseWeekTwo();
+	document.getElementById("start-menu").style.display = "none";
+	document.getElementById("taskbar").style.display = "none";
+    document.getElementById("page").style.background = "black";
+	document.getElementById("shutdown-msg").style.display = "";
+}
+	
+function HideArt() {
+    document.getElementById("window").style.display = "none";
+}
+function ShowArt() {
+    document.getElementById("window").style.display = "";
+    document.getElementById("start-menu").style.display = "none";
+	document.getElementById("week2-window").style.display = "none";
+}
+function WeekTwo() {
+	document.getElementById("window").style.display = "none";
+    document.getElementById("week2-window").style.display = "";
+}
+function CloseWeekTwo(){
+	document.getElementById("week2-window").style.display = "none";
+}
+function setClock(){
+    var time = new Date();
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var grp = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    document.getElementById("clock-num").innerHTML = (hours + ':' + minutes + ' ' + grp);
+    setTimeout(setClock, 10000)
+}
+</script>
+    
