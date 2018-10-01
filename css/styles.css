@@ -6,6 +6,16 @@ body{
 .hidden{
     display:none!important;
 }
+.desktop-icon{
+	height: 7em;
+	width: 4em;
+	text-align: center;
+	display: inline-block;
+    padding: 6px;
+	float:left;
+	margin-left: 4em;
+	vertical-align: top;
+}
 .shutdown-msg{
 	text-align:center;
 	position: absolute;
@@ -32,8 +42,9 @@ body{
 	width: 99.4%;
 	height: 2em;
 	font-size: 18px;
+	top: 0;
+	position: relative;
 	float: top;
-	display: inline-block;
 	text-align: center;
 }
 .bottom-bar{
@@ -74,7 +85,7 @@ body{
     background: #c0c0c0;
     bottom: 2.5em;
     width: 20em;
-    height: 30em;
+    height: 35em;
 }
 .start-button{
     font-family: 'Arial',sans-serif;
@@ -103,12 +114,20 @@ body{
 
 }
 .start-td{
-    height: 5.3em;
+    height: 6em;
     background-color: #c0c0c0;
-    width: 80%;
+    width: 100%;
     float: left;
 	border: none;
+	display: inline;
 	bottom: 0;
+}
+.start-td-text{
+	bottom: 1em;
+	font-size: 1.2em;
+	position: relative;
+	display: inline-block;
+	font-weight: 500;
 }
 .start-td:hover{
     background-color: #052689;
@@ -170,9 +189,10 @@ body{
 	height: 40%;
 	width: 50%;
 	margin-top: 3%;
-	margin-left: 25%;
+	margin-left: 15%;
     margin-bottom: 6%;
 	color: black;
+	display: inline-block;
 }
 .window-text{
 	width: 50%;
