@@ -117,6 +117,7 @@ body{
     height: 6em;
     background-color: #c0c0c0;
     width: 100%;
+	min-width: 0%;
     float: left;
 	border: none;
 	display: inline;
