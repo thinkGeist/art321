@@ -106,21 +106,21 @@
     <h2 style="text-align: center; color:grey;">All images can be opened for better viewing if desired.</h2>
     <h2 style="text-align: center;">Part 1 - Thresholding</h2>
     <a href="img/week-3/oreo.png">
-        <img src="img/week-3/oreo.png" style="margin-left:auto; margin-right:auto; display: block;"/>
+        <img src="img/week-3/oreo.png" style="width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
     </a>
     <p style="padding:1em;">
     The first image has a subjective "best" threshold value depending on what features of Oreo we want to focus on. I ended up landing on a value of <b>163</b> to produce this image that 
     accentuates Oreo's whisters and still retains the information of the background of the image (the window). The alternative is we could have adjusted the threshold value so the darker parts of 
     Oreo were more discernable, but again that is subject to the viewers liking.</p>
     <a href="img/week-3/image.gif">
-        <img src="img/week-3/image.gif" style="margin-left:auto; margin-right:auto; display: block;"/>
+        <img src="img/week-3/image.gif" style="width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
     </a>
     <p style="padding:1em;">Unlike the first image, this seemingly black box has a very objective best threshold value (unless your goal is to ignore the information in the picture) and that value is <b>1</b>. Why? Because
     for any other value the text is not visible. </p>
     
     <h2 style="text-align: center;">Part 2 - Thresholding</h2>
     <a href="img/week-3/barbotan-115.jpg">
-        <img src="img/week-3/barbotan-115.jpg" style="margin-left:auto; margin-right:auto; display: block;"/>
+        <img src="img/week-3/barbotan-115.jpg" style="width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
     </a>
     <p style="padding:1em;">This thresholded image is the result of applying a threshold value of 115 to the image. I chose this value because it offers a balance of clarity, and removal of the background. I would
     argue that there is no single "best" threshold value, as applying more of a threshold value would result in the text starting to disappear, becoming harder to read, and applying less would
@@ -128,23 +128,23 @@
     
     <h2 style="text-align: center;">Part 3 - Color Intensity</h2>
     <a href="img/week-3/Boxes-color.png">
-        <img src="img/week-3/Boxes-color.png" style="margin-left:auto; margin-right:auto; display: block;"/>
+        <img src="img/week-3/Boxes-color.png" style="width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
     </a>
     <a href="img/week-3/Boxes-grey.png">
-        <img src="img/week-3/Boxes-grey.png" style="margin-left:auto; margin-right:auto; display: block;"/>
+        <img src="img/week-3/Boxes-grey.png" style="width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
     </a>
     <p style="padding:1em">The above image was constructed by picking colors with the same intensity/lightness value. The image below is after applying a Image > Mode > Greyscale in photoshop. As we can see, because of the similar light
     intensity values, when converted to grey values the circles disappear as the colors are treated as the same.</p>
     
     <h2 style="text-align: center;">Part 4 - Sharpening</h2>
     <a href="img/week-3/sheet_music.jpg">
-        <img src="img/week-3/sheet_music.jpg" width="400" height="400" style="padding:0.5em ;margin-left:auto; margin-right:auto; display: inline-block;"/>
+        <img src="img/week-3/sheet_music.jpg" style="width: 98%; text-align: center; padding:1% ;margin-left:auto; margin-right:auto; display: inline-block;"/>
     </a>
     <a href="img/week-3/sheet_music-single.jpg">
-        <img src="img/week-3/sheet_music-single.jpg" width="400" height="400" style="padding:0.5em; margin-left:auto; margin-right:auto; display: inline-block;"/>
+        <img src="img/week-3/sheet_music-single.jpg" style="width: 98%; padding:1%; margin-left:auto; margin-right:auto; display: inline-block;"/>
     </a>
     <a href="img/week-3/sheet_music-extra-sharpened.jpg">
-        <img src="img/week-3/sheet_music-extra-sharpened.jpg" width="400" height="400" style="padding:0.5em; margin-left:auto; margin-right:auto; display: inline-block;"/>
+        <img src="img/week-3/sheet_music-extra-sharpened.jpg" style="width: 98%; padding:1%; margin-left:auto; margin-right:auto; display: inline-block;"/>
     </a>
     <p style="padding:1em;">I included 3 images above so it is easier to contrast the difference that sharpening the image makes. The first is the original, the second is a single pass of sharpening, and the third is after several passes.
     What we can see vs. the original is that the discolored pixels
@@ -264,6 +264,7 @@ function highlight(name){
 function dropHighlights() {
     document.getElementById("navicon").style.backgroundColor = "";
     document.getElementById("week2icon").style.backgroundColor = "";
+    document.getElementById("week3icon").style.backgroundColor = "";
 }
 </script>
     

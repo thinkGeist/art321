@@ -10,7 +10,7 @@ body{
 	height: 7em;
 	width: 4em;
 	text-align: center;
-	display: inline-block;
+	display: block;
     padding: 6px;
 	float:left;
 	margin-left: 4em;
