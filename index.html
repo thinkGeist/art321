@@ -26,6 +26,10 @@
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 3
 </div>
+<div class="desktop-icon" id="week4icon" onclick="highlight('week4icon')" ondblclick="WeekFour()">
+	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
+    Week 4
+</div>
 
 <div class="window" id="window" style="display:none;">
     <div class ="topbar">
@@ -48,7 +52,7 @@
             <tr>
                 <td class="navbar-td" onClick="WeekTwo()">Week 2</td>
                 <td class="navbar-td" onClick="WeekThree()">Week 3</td>
-                <td class="navbar-td">Week 4</td>
+                <td class="navbar-td" onClick="WeekFour()">Week 4</td>
             </tr>
             <tr>
                 <td class="navbar-td">Week 5</td>
@@ -154,6 +158,58 @@
     </div>
 </div>
 
+<div class="window" id="week4-window" style="display:none;">
+    <div class ="topbar">
+    
+    	<div class="window-text">
+    	  <p style="padding-left: 1em; position: absolute;"><strong>Week 4</strong></p>
+    	</div>
+        <div class="window-buttons">
+        	<button class="window-button" onclick="CloseWeekFour()">X</button>
+        </div>
+        
+        
+    </div>
+    <div class="window-content">
+        <h1 style="text-align: center; color: white; font-size:6em;">Urban Pictionary</h1>
+        <h2 style="text-align: center; font-size: 2em;">The net art piece I have designed is a website that allows users from around the world to draw their perspective of a word that is scraped from the Urban Dictionary.</h2>
+        
+        <h3 style="text-align: center; color: grey; font-size: 0.7em;">"Sketches" were done in Photoshop as my freehand skills are very poor</h3>
+        
+        <p style="text-align: center; font-size: 2em;">This will be done by scraping the newest trending words each day from <a href="https://www.urbandictionary.com">https://www.urbandictionary.com</a> using a Python bot and storing them into a database
+        along with their accompanying defiition after repeats and date oriented definitions are removed. This is due to the fact that after investigation of the trending words there's usually multiple "October 10" defintions
+        in the trending page.</p>
+        <p style="text-align: center; font-size: 2em;">When a user enters the page they will be greeted by a blank page withthe ability to "enter" the game, at this point their location (via IP or browser location statistics) is gathered.</p>
+        <a href="img/week-4/title.png">
+            <img src="img/week-4/title.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <p style="text-align: center; font-size: 2em;">The screen fades out to present the main screen</p>
+        <a href="img/week-4/onEnter.png">
+            <img src="img/week-4/onEnter.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <p style="text-align: center; font-size: 2em;"> The main screen is presented to the viewer</p>
+        <a href="img/week-4/mainScreen.png">
+            <img src="img/week-4/mainScreen.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        
+        <p style="text-align: center; font-size: 2em;"> Once entered, the user is part of a 'global' game. Once a player is ready to draw, they can click the "Draw Now!" button to start a drawing session, or can look through the drawings of others to try and guess them.</p>
+  		
+        <p style="text-align: center; font-size: 2em;">After clicking the Draw button the system then grabs one of the words scraped from the Urban Dictionary and asks them to draw it preferably allowing two input methods, 
+        either the user can draw it with their mouse or upload a hand drawn image from their computer.</p>
+        <a href="img/week-4/drawScreen.png">
+            <img src="img/week-4/drawScreen.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        
+        <p style="text-align: center; font-size: 2em;"> If the user instead selects an image to guess instead they are brought to the guess screen where they are presented with the location of the artist, the artists success rating, and the image itself.</p>
+        <a href="img/week-4/guessScreen.png">
+            <img src="img/week-4/guessScreen.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        
+        <p style="text-align: center; font-size: 2em;"> Sucessful gusses increment the "Successful guesses" for a specific image and increase the artists score by a proportion based on successful guesses vs. wrong guesses.</p>
+    </div>
+</div>
+
+
 <div class="start-menu" id="start-menu" style="display:none;">
     <div class="start-side"><div class="sideways"><p><b>Windows</b> 98</p></div></div>
     <table class="start-navbar" border="7">
@@ -238,6 +294,11 @@ function WeekThree() {
 	document.getElementById("window").style.display = "none";
     document.getElementById("week3-window").style.display = "";
 }
+function WeekFour() {
+    dropHighlights();
+	document.getElementById("window").style.display = "none";
+    document.getElementById("week4-window").style.display = "";
+}
 function CloseWeekTwo(){
     dropHighlights();
 	document.getElementById("week2-window").style.display = "none";
@@ -245,6 +306,10 @@ function CloseWeekTwo(){
 function CloseWeekThree(){
     dropHighlights();
 	document.getElementById("week3-window").style.display = "none";
+}
+function CloseWeekFour(){
+    dropHighlights();
+	document.getElementById("week4-window").style.display = "none";
 }
 function setClock(){
     var time = new Date();
