@@ -18,15 +18,15 @@
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week Navigator
 </div>
-<div class="desktop-icon" id="week2icon" onclick="highlight('week2icon')" ondblclick="WeekTwo()">
+<div class="desktop-icon" id="week2icon" onclick="highlight('week2icon')" ondblclick="OpenWeek('week2-window')">
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 2
 </div>
-<div class="desktop-icon" id="week3icon" onclick="highlight('week3icon')" ondblclick="WeekThree()">
+<div class="desktop-icon" id="week3icon" onclick="highlight('week3icon')" ondblclick="OpenWeek('week3-window')">
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 3
 </div>
-<div class="desktop-icon" id="week4icon" onclick="highlight('week4icon')" ondblclick="WeekFour()">
+<div class="desktop-icon" id="week4icon" onclick="highlight('week4icon')" ondblclick="OpenWeek('week4-window')">
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 4
 </div>
@@ -50,9 +50,9 @@
         <table class="navbar" border="7">
         <tbody>
             <tr>
-                <td class="navbar-td" onClick="WeekTwo()">Week 2</td>
-                <td class="navbar-td" onClick="WeekThree()">Week 3</td>
-                <td class="navbar-td" onClick="WeekFour()">Week 4</td>
+                <td class="navbar-td" onClick="OpenWeek('week2-window')">Week 2</td>
+                <td class="navbar-td" onClick="OpenWeek('week3-window')">Week 3</td>
+                <td class="navbar-td" onClick="OpenWeek('week4-window')">Week 4</td>
             </tr>
             <tr>
                 <td class="navbar-td">Week 5</td>
@@ -76,7 +76,7 @@
     	  <p style="padding-left: 1em; position: absolute;"><strong>Week 2</strong></p>
     	</div>
         <div class="window-buttons">
-        	<button class="window-button" onclick="CloseWeekTwo()">X</button>
+        	<button class="window-button" onclick="CloseWeek('week2-window')">X</button>
         </div>
         
         
@@ -105,7 +105,7 @@
     	  <p style="padding-left: 1em; position: absolute;"><strong>Week 3</strong></p>
     	</div>
         <div class="window-buttons">
-        	<button class="window-button" onclick="CloseWeekThree()">X</button>
+        	<button class="window-button" onclick="CloseWeek('week3-window')">X</button>
         </div>
         
         
@@ -165,7 +165,7 @@
     	  <p style="padding-left: 1em; position: absolute;"><strong>Week 4</strong></p>
     	</div>
         <div class="window-buttons">
-        	<button class="window-button" onclick="CloseWeekFour()">X</button>
+        	<button class="window-button" onclick="CloseWeek('week4-window')">X</button>
         </div>
         
         
@@ -284,6 +284,15 @@ function ShowArt() {
     document.getElementById("window").style.display = "";
     document.getElementById("start-menu").style.display = "none";
 }
+function OpenWeek(name){
+	dropHighlights();
+	document.getElementById("window").style.display = "none";
+    document.getElementById(name).style.display = "";
+}
+function CloseWeek(name){
+	dropHighlights();
+	document.getElementById(name).style.display = "none";
+}	
 function WeekTwo() {
     dropHighlights();
 	document.getElementById("window").style.display = "none";
@@ -330,6 +339,7 @@ function dropHighlights() {
     document.getElementById("navicon").style.backgroundColor = "";
     document.getElementById("week2icon").style.backgroundColor = "";
     document.getElementById("week3icon").style.backgroundColor = "";
+	document.getElementById("week4icon").style.backgroundColor = "";
 }
 </script>
     
