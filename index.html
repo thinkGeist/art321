@@ -30,6 +30,10 @@
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 4
 </div>
+<div class="desktop-icon" id="week5icon" onclick="highlight('week5icon')" ondblclick="OpenWeek('week5-window')">
+	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
+    Week 5
+</div>
 
 <div class="window" id="window" style="display:none;">
     <div class ="topbar">
@@ -55,7 +59,7 @@
                 <td class="navbar-td" onClick="OpenWeek('week4-window')">Week 4</td>
             </tr>
             <tr>
-                <td class="navbar-td">Week 5</td>
+                <td class="navbar-td" onClick="OpenWeek('week5-window')">Week 5</td>
                 <td class="navbar-td">Week 6</td>
                 <td class="navbar-td">Week 7</td>
             </tr>
@@ -206,6 +210,69 @@
         </a>
         
         <p style="text-align: center; font-size: 2em;"> Successful guesses increment the "Successful guesses" for a specific image and increase the artists score by a proportion based on successful guesses vs. wrong guesses.</p>
+    </div>
+</div>
+
+<div class="window" id="week5-window" style="display:none;">
+    <div class ="topbar">
+    
+    	<div class="window-text">
+    	  <p style="padding-left: 1em; position: absolute;"><strong>Week 5</strong></p>
+    	</div>
+        <div class="window-buttons">
+        	<button class="window-button" onclick="CloseWeek('week5-window')">X</button>
+        </div>
+        
+        
+    </div>
+    <div class="window-content">
+        <h1 style="text-align: center; color: white; font-size:4em;">Week 5 - Animation</h1>
+        <h2 style="text-align: center; color:grey;">All images can be opened for better viewing if desired.</h2>
+        <h2 style="text-align: center;">Rough Sketches</h2>
+        <a href="img/week-5/sketch-bad.png">
+            <img src="img/week-5/sketch-bad.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <p style="padding:1em; text-align: center;">
+        The sketch presented above was my first idea for the explosion animation, but when actually trying to implement this design I realized not only would it be very difficult given my little to no ability in drawing/animation, it also didn't have
+        a source for the explosion. Realizing this, I came up with a simpler, more clear animation that featured a bomb exploding, as you can see in the second sketch below.</p>
+        <a href="img/week-5/sketch-good.png">
+            <img src="img/week-5/sketch-good.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <p style="padding:1em; text-align: center;">This second design would be much easier to implement from a non-artist standpoint, allowing the use of simple shapes and frame-by-frame animation to implement for a non-professional. It features the
+        black bomb with a fuse that runs down over the first few frames, then explodes outwards from the middle of the bomb with some extra screen shake to try and simulate the "force" of the explosion. The sketch shows 6 frames, however the finished
+        animation is actually made up of 17 different frames.</p>
+
+        <h2 style="text-align: center;">Animation</h2>
+        <a href="img/week-5/bomb.gif">
+            <img src="img/week-5/bomb.gif" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <p style="padding:1em; text-align: center;">Here is the finished 17 frame animation, each frame exists on the screen for 75.0 milliseconds, resulting in an animation length of 1.275 seconds. I chose this number because it not only makes
+        the animation appear a bit smoother, but also hides some of the imperfections in the later frames.</p>
+
+      <h2 style="text-align: center;">Individual Frames</h2>
+      <div style="margin-left: 8%; margin-right: 8%;">
+        
+        <a href="img/week-5/frames/1.png"><img src="img/week-5/frames/1.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/2.png"><img src="img/week-5/frames/2.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/3.png"><img src="img/week-5/frames/3.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/4.png"><img src="img/week-5/frames/4.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/5.png"><img src="img/week-5/frames/5.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/6.png"><img src="img/week-5/frames/6.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/7.png"><img src="img/week-5/frames/7.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/8.png"><img src="img/week-5/frames/8.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/9.png"><img src="img/week-5/frames/9.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/10.png"><img src="img/week-5/frames/10.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/11.png"><img src="img/week-5/frames/11.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/12.png"><img src="img/week-5/frames/12.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/13.png"><img src="img/week-5/frames/13.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/14.png"><img src="img/week-5/frames/14.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/15.png"><img src="img/week-5/frames/15.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/16.png"><img src="img/week-5/frames/16.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+        <a href="img/week-5/frames/17.png"><img src="img/week-5/frames/17.png" style="max-width: 17%; margin-left:auto; padding: 1%; margin-right:auto; display: inline-block;"/></a>
+       </div>
+        <p style="padding:1em; text-align: center;">Here we can see each frame by itself, showing how I made the explosion animation by creating each frame as a separate PSD then combining them all in a different program. Photoshop has the ability to make
+        an animation by using each layer as a frame, however this goes against how I would usually use photoshop layers to distinguish between objects, so I went with this route. Each of the frames consists of roughly 4 objects/layers: The bomb, 
+      The outer explosion, The inner explosion, and depending on the frame either the fuse, or the white space inside the explosion.</p>
     </div>
 </div>
 

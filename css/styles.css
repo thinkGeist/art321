@@ -2,6 +2,9 @@ body{
 	background-color: #008080;
 	color: white;
 }
+br{
+	line-height: 800%;
+}
 
 .hidden{
     display:none!important;
