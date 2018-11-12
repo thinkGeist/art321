@@ -38,6 +38,10 @@
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 6
 </div>
+<div class="desktop-icon" id="week7icon" onclick="highlight('week7icon')" ondblclick="OpenWeek('week7-window')">
+	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
+    Week 7
+</div>
 
 <div class="window" id="window" style="display:none;">
     <div class ="topbar">
@@ -64,8 +68,8 @@
             </tr>
             <tr>
                 <td class="navbar-td" onClick="OpenWeek('week5-window')">Week 5</td>
-                <td class="navbar-td">Week 6</td>
-                <td class="navbar-td">Week 7</td>
+                <td class="navbar-td" onClick="OpenWeek('week6-window')">Week 6</td>
+                <td class="navbar-td" onClick="OpenWeek('week7-window')">Week 7</td>
             </tr>
             <tr>
                 <td class="navbar-td">Week 8</td>
@@ -306,6 +310,50 @@
 </div>
 
 
+<div class="window" id="week7-window" style="display:none;">
+    <div class ="topbar">
+    
+    	<div class="window-text">
+    	  <p style="padding-left: 1em; position: absolute;"><strong>Week 7</strong></p>
+    	</div>
+        <div class="window-buttons">
+        	<button class="window-button" onclick="CloseWeek('week7-window')">X</button>
+        </div>
+        
+        
+    </div>
+    <div class="window-content">
+        <h1 style="text-align: center; color: white; font-size:4em;">Week 7 Project</h1>
+        <h2 style="text-align: center; color:grey;">All images can be opened for better viewing if desired.</h2>
+        <h2 style="text-align: center;">Part 1 - + Sign</h2>
+        <a href="img/week-7/1.png">
+            <img src="img/week-7/1.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <h2 style="text-align: center;">Part 2 - WHY</h2>
+        <a href="img/week-7/2.png">
+            <img src="img/week-7/2.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <h2 style="text-align: center;">Part 3 - Lines</h2>
+        <a href="img/week-7/3.png">
+            <img src="img/week-7/3.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <h2 style="text-align: center;">Part 4 - Boxes</h2>
+        <a href="img/week-7/4.png">
+            <img src="img/week-7/4.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <h2 style="text-align: center;">Part 5 - Coloured Boxes</h2>
+        <a href="img/week-7/5.png">
+            <img src="img/week-7/5.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+        <h2 style="text-align: center;">Part 6 - Circle</h2>
+        <a href="img/week-7/6.png">
+            <img src="img/week-7/6.png" style="max-width: 100%; margin-left:auto; margin-right:auto; display: block;"/>
+        </a>
+
+    </div>
+</div>
+
+
 <div class="start-menu" id="start-menu" style="display:none;">
     <div class="start-side"><div class="sideways"><p><b>Windows</b> 98</p></div></div>
     <table class="start-navbar" border="7">
@@ -436,6 +484,9 @@ function dropHighlights() {
     document.getElementById("week2icon").style.backgroundColor = "";
     document.getElementById("week3icon").style.backgroundColor = "";
 	document.getElementById("week4icon").style.backgroundColor = "";
+	document.getElementById("week5icon").style.backgroundColor = "";
+	document.getElementById("week6icon").style.backgroundColor = "";
+	document.getElementById("week7icon").style.backgroundColor = "";
 }
 </script>
     
