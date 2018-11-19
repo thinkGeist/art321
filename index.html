@@ -42,6 +42,10 @@
 	<img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 7
 </div>
+<div class="desktop-icon" id="week8icon" onclick="highlight('week8icon')" ondblclick="OpenWeek('week8-window')">
+    <img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
+    Week 8
+</div>
 
 <div class="window" id="window" style="display:none;">
     <div class ="topbar">
@@ -72,7 +76,7 @@
                 <td class="navbar-td" onClick="OpenWeek('week7-window')">Week 7</td>
             </tr>
             <tr>
-                <td class="navbar-td">Week 8</td>
+                <td class="navbar-td" onClick="OpenWeek('week8-window')">Week 8</td>
                 <td class="navbar-td">Week 9</td>
                 <td class="navbar-td">Week 10</td>
             </tr>
@@ -353,6 +357,29 @@
     </div>
 </div>
 
+<div class="window" id="week8-window" style="display:none;">
+    <div class ="topbar">
+
+        <div class="window-text">
+            <p style="padding-left: 1em; position: absolute;"><strong>Week 8</strong></p>
+        </div>
+        <div class="window-buttons">
+            <button class="window-button" onclick="CloseWeek('week8-window')">X</button>
+        </div>
+
+
+    </div>
+    <div class="window-content">
+        <h1 style="text-align: center; color: white; font-size:4em;">Week 8 Project - Video Editing</h1>
+        <h2 style="text-align: center;">Space Bums</h2>
+        <video width="100%" controls>
+            <source src="mp4/week-8/a7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h2 style="text-align: center;">Nathan Geist, Angela Ranola, Eve Chen</h2>
+    </div>
+</div>
+
 
 <div class="start-menu" id="start-menu" style="display:none;">
     <div class="start-side"><div class="sideways"><p><b>Windows</b> 98</p></div></div>
@@ -487,6 +514,7 @@ function dropHighlights() {
 	document.getElementById("week5icon").style.backgroundColor = "";
 	document.getElementById("week6icon").style.backgroundColor = "";
 	document.getElementById("week7icon").style.backgroundColor = "";
+    document.getElementById("week8icon").style.backgroundColor = "";
 }
 </script>
     
