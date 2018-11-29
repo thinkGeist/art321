@@ -46,6 +46,10 @@
     <img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
     Week 8
 </div>
+<div class="desktop-icon" id="week9icon" onclick="highlight('week9icon')" ondblclick="OpenWeek('week9-window')">
+    <img src="img/app.png" width="60" height="60" style="padding-top: 1em; padding-right: 1em;">
+    Week 9
+</div>
 
 <div class="window" id="window" style="display:none;">
     <div class ="topbar">
@@ -77,7 +81,7 @@
             </tr>
             <tr>
                 <td class="navbar-td" onClick="OpenWeek('week8-window')">Week 8</td>
-                <td class="navbar-td">Week 9</td>
+                <td class="navbar-td" onClick="OpenWeek('week9-window')">Week 9</td>
                 <td class="navbar-td">Week 10</td>
             </tr>
         </tbody>
@@ -380,6 +384,104 @@
     </div>
 </div>
 
+<div class="window" id="week9-window" style="display:none;">
+    <div class ="topbar">
+    
+    	<div class="window-text">
+    	  <p style="padding-left: 1em; position: absolute;"><strong>Week 9</strong></p>
+    	</div>
+        <div class="window-buttons">
+        	<button class="window-button" onclick="CloseWeek('week6-window')">X</button>
+        </div>
+        
+        
+    </div>
+    <div class="window-content">
+        <h1 style="text-align: center; color: white; font-size:4em;">Week 9 Project - Interaction</h1>
+        <h1 style="text-align: center; font-size:2em;">Gravity Bone</h1>
+        <h2>Questions</h2>
+        <h4>1) How does the allowed interaction keep the narrative on track? How does it permit variations and branches?</h4>
+        <p>It keeps the story and narrative simple and easy to follow by not allowing too many unnecessary actions to take from the story the player is meant to follow.
+        During the time I spent playing the game I went out of my way to try and interact with other elements of the environemnt (people, doors, sinks, etc.) but none seemed to do anything
+        besides the objects you are meant to interact with from a story perspective.Because of this Gravity Bone appears less like a game to me, and more like a story that the player is meant 
+        to follow, not allowing them to make their own choices and instead following the set path the developer intended them to follow.</p>
+        <h4>2) Describe the nature of the graphical quality and how it is relevant to the story.</h4>
+        <p>The artistic style and graphical quality of the game was cute and lighthearted, pointing me to more of a blocky minecraft feel. To my surprise it was actually made on the same engine
+        as Quake II, a game with a far darker atmosphere and less cheery vibe. The way they chose to present the story from a graphical standpoint was definitely humorous, the missions you received
+        appeared almost comical in the way they are given, however the change from level 1 to level 2 was an important one I believe the developers intended to engage the player with. Whereas the first level
+        is bright, cheery, and in a party atmosphere, the second level is dark, provides real consequence for bad gameplay (multiple ways to fail) and this darker atmosphere really helps build up to the conclusion
+        of the player being shot at the end of the level.</p>
+        <h4>3) Describe the nature of the interaction and how it influences choices and how the player feels. </h4>
+        <p>The restriction of the players ability to interact with the environment leaves very few choices that the player has to make themselves. This linear playstyle, as stated before points me to
+        considering Gravity Bone as less of a game, and more of a story presented in a 3D world. The choices the player makes are those the developer forces the player to make in order to progress further in the 
+        story, so instead of an RPG like game where the player has a part in creating the story, it's more as if the player is watching the story unfold - similar to a movie.</p>
+        <br>
+        <div style="display:inline-block; text-align:left;">
+            <h2>A Description of My Gameplay</h2>
+            <h3>(Since I found the game to be entirely linear, I will simply provide a linear description of the events as they unfolded.)</h3>
+            <h4>First Mission</h4>
+            <ul>
+                <li>I came down an elevator to cheery music, I'm at a masquerade party.</li>
+                <li>I stepped out of the elevator and saw a memo card in my hand telling me to find a furnace room.</li>
+                <li>I tried to interact ('e') with some people at the party, no results.</li>
+                <li>I wondered if you could jump off the edge, you can, and you die.</li>
+                <li>I walked around the walkway and up some stairs, found a door that says "staff only" but it doesn't open</li>
+                <li>Found out I can get through the door when a waiter opens it</li>
+                <li>The furnace room is back here! There's a sign telling me how to jump</li>
+                <li>Assuming the game telling me how to jump was a hint, I jumped on the sink, furnace, then went behind it.</li>
+                <li>Behind the furnace was a briefcase, it gave me a mission to give a drink to a man with red hair, as well as the drink in question and a waiter suit</li>
+                <li>I left the room and went upstairs, the only place I had not been yet.</li>
+                <li>The man with the red hair was upstairs, so I gave him the drink - nice burp.</li>
+                <li>It seems my job here is done, and I'm told to exit, so I head back to the door beside the first elevator and exit the level.</li>
+                <li>I guess giving him the drink made him extra smelly and trackable across the galaxy, neat.</li>
+            </ul>
+            <h4>Second Mission</h4>
+            <ul>
+                <li>This time I came up an elevator, it's dark, rainy, and gloomy out. I seems like I'm in an office tower of sorts.</li>
+                <li>Once again I have a note to go to the furnace room.</li>
+                <li>Tried all the doors around me, none seemed to open, although the furnace room is much easier to find this time.</li>
+                <li>There seems to be some slamming traps of death in the furnace room, I'm not sure what functional purpose they serve but they look lethal.</li>
+                <li>They are in fact lethal. Thanks for the quake death sounds.</li>
+                <li>Respawned and went back to the furnace room, this time going through the slammy traps without dying.</li>
+                <li>On the other side was a hammer, and a can of sprayable freon?</li>
+                <li>Doesn't look like I can go back the way I came, but the door in front of me has a padlock on it.</li>
+                <li>Breaking it with the hammer doesn't work.</li>
+                <li>However spraying it with freon first does the trick!</li>
+                <li>After breaking two locks I found another briefcase</li>
+                <li>I guess I have to take pictures of... birds?</li>
+                <li>I exited the furnace room through the only way I hadn't been yet</li>
+                <li>Door to the right is locked, where are the birds?</li>
+                <li>Started looking out windows for birds</li>
+                <li>Noticed a walkway leading to a red door, went that way</li>
+                <li>Opened the door to find a bird inside!</li>
+                <li>Took a picture of the bird with the camera... it exploded?</li>
+                <li>I went back across the walkway, noticed two red doors I had missed initially</li>
+                <li>Both had photograph-volatile birds in them that also exploded when being photographed</li>
+                <li>Now where to find the final two?</li>
+                <li>Outside looks like there's a jump puzzle. I hate jump puzzles</li>
+                <li>I really searched for an alternative to the jump puzzle... But there's red doors at the end of it</li>
+                <li>Finally realized I guess I have to commit to the jump puzzle</li>
+                <li>Thankfully this seemingly small flagpoles have a collider about 100 times their visual size.</li>
+                <li>Surprisingly made it across the jump puzzle in one go!</li>
+                <li>Queue photographing volatile birds - note that trying to stand in the explosion does not harm the self.</li>
+                <li>Went through the door at the end of the walkway, I appear to be just behind the door I tried to get through earlier.</li>
+                <li>Climbed through the vent which appeared to be my only option, which put me back in the furnace room with the slammy death trap.</li>
+                <li>I went back to the elevator to exit</li>
+                <li>And was shot in the back</li>
+                <li>The shooter took my camera and ran off through the window, at this point I figured that was it</li>
+                <li>Turns out I am remarkably resilient and could chase after her, oops. I'm a little behind now</li>
+                <li>I chased her through a long section of walkways, railroad tracks, buildings, etc. (In similar fashion to Quake II series games, you move faster when running diagonally ;))</li>
+                <li>I turn a hard corner and am shot again, this time multiple times. I break the guard railing behind me and fall from the walkway.</li>
+                <li>As I'm falling it appears as though I'm going through flashbacks of notable events in my life. I'm assuming I was meant to die and this is actually the end for my character</li>
+                <li>The screen goes black, and it's the end of the game.</li>
+            </ul>
+            <br>
+         <p>I know nothing else is required past here but this was actually a really interesting assignment, I've never truly thought of breaking down a game into its individual choices like this, it makes 
+         the developers thinking strategy much more clear to me as a player, and the game itself was a hoot and a wonderful throwback to simpler times!</p>
+        </div>
+    </div>
+</div>
+
 
 <div class="start-menu" id="start-menu" style="display:none;">
     <div class="start-side"><div class="sideways"><p><b>Windows</b> 98</p></div></div>
@@ -515,6 +617,7 @@ function dropHighlights() {
 	document.getElementById("week6icon").style.backgroundColor = "";
 	document.getElementById("week7icon").style.backgroundColor = "";
     document.getElementById("week8icon").style.backgroundColor = "";
+	document.getElementById("week9icon").style.backgroundColor = "";
 }
 </script>
     
