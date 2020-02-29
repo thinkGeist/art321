@@ -35,9 +35,9 @@ br{
 .topbar{
 	font-family: 'Arial',sans-serif;
 	background: #044999; /* Old browsers */
-    background: -moz-linear-gradient(left, #044999 0%, #7db9e8 98%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #044999 0%,#7db9e8 98%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #044999 0%,#7db9e8 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(left, #044999 0%, #083492 98%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #044999 0%,#083492 98%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #044999 0%,#083492 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#044999', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
 	color: white;
 	border-top: solid 0.2em #c0c0c0;
@@ -58,7 +58,7 @@ br{
     width: 100%;
     bottom: 0;
     left: 0;
-    height: 2.5em;
+    height: 2em;
     font-size: 18px;
     float: bottom;
     position: fixed;
@@ -72,10 +72,10 @@ br{
     font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
     border-top: solid 0.1em #514F4F;
     border-left: solid 0.1em #514F4F;
-    padding-top: 0.5em;
+    padding-top: 0.2em;
     padding-right: 0.3em;
     padding-left: 0.3em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.2em;
     display: inline;
     right: 0.5%;
     bottom: 0.5%;
@@ -88,7 +88,7 @@ br{
     position: fixed;
     display: flex;
     background: #c0c0c0;
-    bottom: 2.5em;
+    bottom: 2em;
     width: 20em;
     height: 35em;
 }
@@ -96,7 +96,7 @@ br{
     font-family: 'Arial',sans-serif;
     background: #c0c0c0;
     color: black;
-    width: 7em;
+    width: 5em;
     height: 80%;
     left: 1%;
     margin-left: 0.2em;
@@ -211,25 +211,30 @@ br{
     z-index: 2;
 }
 .window-text{
-	width: 50%;
+	width: 70%;
 	float: left;
 	text-align: left;
 	position: relative;
-	bottom: 0.5em;
+    bottom: 0.5em;
+    font-size: 110%;
 }
 .window-buttons{
 	width: 20%;
 	float: right;
 	display: inline;
 	padding-right: 0.1em;
-	padding-top: 0.1em;
+    padding-top: 0.1em;
+    margin-right: 0.2em;
+    margin-top: 0.2em;
 }
 .window-button{
 	height: 100%;
 	float: right;
 	font-size: 1em;
 	padding-left: 0.4em;
-	padding-right: 0.4em;
+    padding-right: 0.4em;
+    background-color: #a7a7a7;
+    outline: 0;
 }
 
 .navbar{
